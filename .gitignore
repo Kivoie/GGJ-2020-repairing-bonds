@@ -1,3 +1,4 @@
 # Renpy files
 log.txt
 errors.txt
+game/saves/*.save

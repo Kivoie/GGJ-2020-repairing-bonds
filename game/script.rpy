@@ -3,14 +3,17 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define u = Character("[mchar]")
+define You = Character("[username]")
+
+$ lol = int(0)
+jump start
 
 
-# The game starts here.
+########################## The game starts here. ##########################
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
+    # Show a background. This uses a placeholder by default, but yoYou can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
@@ -18,16 +21,17 @@ label start:
     
     # Variables are denoted using a dollar sign ($) prefix before the variable name
     
-    $ mchar = renpy.input("What's your name, doc?")     #TODO
-    $ mchar = mchar.strip()
+    $ username = renpy.input("What's your name, doc?")     #TODO
+    $ username = username.strip()
     
-    if not mchar:
-        $ mchar = "Doctor"      #TODO
-    
-    # Calling variables are denoted by square brackets ([])
-    u "Hi there, [mchar]!"
+    if not username:
+        $ username = "You"      #TODO
 
-    # This shows a character sprite. A placeholder is used, but you can
+    # Calling variables are denoted by square brackets ([])
+    
+    "Hi there, [username]!"
+
+    # This shows a character sprite. A placeholder is used, but yoYou can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
@@ -35,19 +39,26 @@ label start:
 
     # These display lines of dialogue.
 
-    u "Welcome"
+    You "Welcome"
 
-    u "Better minds"
+    You "Placeholder name"
     
     "Here is a menu"
     
     menu:
         "Option 1":
-            u "You have chosen option 1"
+            You "I have chosen option 1"
+            $ lol = int(1)
         "Option 2":
-            u "You have chosen option 2"
+            You "I have chosen option 2"
+            $ lol = int(2)
         "Option 3":
-            u "You have chosen option 3"
+            You "I have chosen option 3"
+            $ lol = int(3)
+            
+
+    "Your total score is [lol]."
+    
 
     "Game end"
     
