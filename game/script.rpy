@@ -1,4 +1,9 @@
-﻿# The script of the game goes in this file.
+﻿# Copyright (C) 2020 Carleton University. No part of
+# this file may be reproduced, in any form or by any
+# other means, without permission in writing from
+# the university.
+
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
