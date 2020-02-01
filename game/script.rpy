@@ -15,13 +15,17 @@ label start:
     # images directory to show it.
 
     scene bg room
+    
+    # Variables are denoted using a dollar sign ($) prefix before the variable name
+    
     $ mchar = renpy.input("What's your name, doc?")     #TODO
     $ mchar = mchar.strip()
     
     if not mchar:
         $ mchar = "Doctor"      #TODO
     
-    u "Hi there, [mchar]"
+    # Calling variables are denoted by square brackets ([])
+    u "Hi there, [mchar]!"
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
