@@ -1,2 +1,4 @@
-# GGJ-2020-turn-based-game
-A turn based game by David Liu and Danny Vuong
+# GGJ-2020-better-minds-visual-novel
+A visual novel game by David Liu and Danny Vuong
+
+COPYRIGHT (C) 2020 CARLETON UNIVERSITY. ALL RIGHTS RESERVED.
