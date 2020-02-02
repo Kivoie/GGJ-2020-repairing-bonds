@@ -1,22 +1,27 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 31, in script
-    You "Hi there, [username]!"
-Exception: Sayer 'You' is not defined.
+  File "game/script.rpy", line 33, in script
+    $ him = [renpy.random.shuffle("abcdefg")]
+  File "game/script.rpy", line 33, in <module>
+    $ him = [renpy.random.shuffle("abcdefg")]
+TypeError: 'unicode' object does not support item assignment
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 31, in script
-    You "Hi there, [username]!"
-  File "C:\Users\danny\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 678, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\danny\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 576, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'You' is not defined.
+  File "game/script.rpy", line 33, in script
+    $ him = [renpy.random.shuffle("abcdefg")]
+  File "C:\Users\danny\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\danny\Downloads\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script.rpy", line 33, in <module>
+    $ him = [renpy.random.shuffle("abcdefg")]
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/random.py", line 291, in shuffle
+TypeError: 'unicode' object does not support item assignment
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
-better minds 1.0
-Sat Feb 01 13:50:38 2020
+ 
+Sat Feb 01 23:45:15 2020
