@@ -165,7 +165,7 @@ label start:
             "\"Hey, I think you got the wrong number, it’s not Steve.\""
             "..."
             "...*buzz*...*buzz*..."
-            while nameFlag True:
+            while nameFlag is True:
                 $ username = renpy.input("\"oh wat. sorry who is this..?\"")
                 $ username = username.strip()
                 if not username:
